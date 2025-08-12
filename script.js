@@ -15,11 +15,28 @@ form.addEventListener("submit", function (e) {
     let nouveauLivre = document.createElement("li");
     nouveauLivre.textContent = `${titre} - ${auteur}`;
 
+    let btnSupprimer = document.createElement("button");
+    btnSupprimer.textContent = "❌";
+    btnSupprimer.style.float = "right";
+    btnSupprimer.style.backgroundColor = "transparent";
+    btnSupprimer.style.border = "none";
+    btnSupprimer.style.cursor = "pointer";
+
+    btnSupprimer.addEventListener("click", function () {
+      // listeLivres.removeChild(nouveauLivre);
+      nouveauLivre.remove();
+    });
+
+    nouveauLivre.appendChild(btnSupprimer);
     listeLivres.appendChild(nouveauLivre);
 
     inputAuteur.value = "";
     inputTitre.value = "";
   }
+});
+
+effacer.addEventListener("click", function () {
+  listeLivres.textContent = "";
 });
 
 function sauvegarderTitre(titre, auteur) {
@@ -31,10 +48,6 @@ function sauvegarderTitre(titre, auteur) {
   localStorage.setItem("titre", inputTitre.value);
   localStorage.setItem("auteur", inputAuteur.value);
 }
-
-effacer.addEventListener("click", function () {
-  listeLivres.textContent = "";
-});
 
 scrollTop.addEventListener("click", function () {
   window.scrollTo({
