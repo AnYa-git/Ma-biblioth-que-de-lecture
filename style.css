@@ -102,12 +102,11 @@ input[type="text"]:focus {
   font-family: var(--primary-font);
   font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 #ajouter:hover {
   background-color: var(--third-color);
-  transform: scale(1.1);
 }
 
 #scrollTop img {
