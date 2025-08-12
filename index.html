@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/book.png" type="image/x-icon" />
+    <title>Bibliothèque de lecture</title>
+  </head>
+  <body>
+    <h1>Ma bibliothèque de lécture</h1>
+
+    <section id="livres-section">
+      <div id="liste-livres">
+        <h2>Ma liste de lécture</h2>
+
+        <ul id="livres">
+          <li>L'alchimiste</li>
+          <li>Captive</li>
+          <li>La femme de mènage</li>
+        </ul>
+      </div>
+
+      <div id="formulaire-ajout">
+        <h2>Ajouter un nouveau livre</h2>
+        <form id="ajout-livre">
+          <input type="text" placeholder="Titre du livre" id="titre" required />
+          <input
+            type="text"
+            placeholder="Auteur du livre"
+            id="auteur"
+            required
+          />
+          <button id="ajouter" type="submit">Ajouter</button>
+        </form>
+      </div>
+    </section>
+
+    <button id="scrollTop">
+      <img src="images/arrowtop.png" alt="fléche vers le haut" />
+    </button>
+
+    <footer>
+      <p>🌸 Anya 🌸</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
