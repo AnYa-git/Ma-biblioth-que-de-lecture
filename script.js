@@ -3,6 +3,7 @@ let inputTitre = document.getElementById("titre");
 let inputAuteur = document.getElementById("auteur");
 let listeLivres = document.getElementById("livres");
 let scrollTop = document.getElementById("scrollTop");
+let effacer = document.getElementById("effacer");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -15,9 +16,6 @@ form.addEventListener("submit", function (e) {
     nouveauLivre.textContent = `${titre} - ${auteur}`;
 
     listeLivres.appendChild(nouveauLivre);
-
-    sauvegarderTitre(titre);
-    sauvegarderAuteur(auteur);
 
     inputAuteur.value = "";
     inputTitre.value = "";
@@ -33,6 +31,10 @@ function sauvegarderTitre(titre, auteur) {
   localStorage.setItem("titre", inputTitre.value);
   localStorage.setItem("auteur", inputAuteur.value);
 }
+
+effacer.addEventListener("click", function () {
+  listeLivres.textContent = "";
+});
 
 scrollTop.addEventListener("click", function () {
   window.scrollTo({
