@@ -4,6 +4,11 @@ let inputAuteur = document.getElementById("auteur");
 let listeLivres = document.getElementById("livres");
 let scrollTop = document.getElementById("scrollTop");
 let effacer = document.getElementById("effacer");
+let themeToggle = document.getElementById("theme-toggle");
+
+themeToggle.addEventListener("click", function () {
+  document.body.classList.toggle("brown-theme");
+});
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
